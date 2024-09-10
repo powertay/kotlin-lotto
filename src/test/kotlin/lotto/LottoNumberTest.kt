@@ -1,3 +1,5 @@
+package lotto
+
 import org.assertj.core.api.Assertions.assertThatIllegalStateException
 import org.junit.jupiter.api.Test
 

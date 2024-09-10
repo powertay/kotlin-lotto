@@ -1,3 +1,5 @@
+package lotto
+
 class WinningLotto(
     private val winningLotto: Lotto,
     private val bonusLottoNumber: LottoNumber,
