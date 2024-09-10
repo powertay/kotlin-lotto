@@ -16,7 +16,7 @@ class LottoTest {
     @Test
     fun `로또번호가 포함되어있는지 확인한다`() {
         val lotto = Lotto(1, 2, 3, 4, 5, 6)
-        val actual = lotto.contains(LottoNumber(1))
+        val actual = lotto.contains(LottoNumber.from(1))
         actual shouldBe true
     }
 }
