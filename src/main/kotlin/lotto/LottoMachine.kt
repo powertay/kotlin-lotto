@@ -1,15 +1,11 @@
-class LottoMachine(
-) {
+package lotto
+
+class LottoMachine {
     fun issue(inputMoney: Int): Set<Lotto> {
         val count = inputMoney / LOTTO_PRICE
-        val lottos = mutableSetOf<Lotto>()
-
-        (1..count).forEach { _ ->
-            val intList = LOTTO_NUMBERS.shuffled().take(6)
-            lottos.add(Lotto(intList))
-        }
-
-        return lottos
+        return (1..count)
+            .map { Lotto(LOTTO_NUMBERS.shuffled().take(6)) }
+            .toSet()
     }
 
     companion object {
