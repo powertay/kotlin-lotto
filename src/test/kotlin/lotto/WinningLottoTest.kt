@@ -2,6 +2,7 @@ package lotto
 
 import org.assertj.core.api.Assertions.assertThatIllegalStateException
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertDoesNotThrow
 
 class WinningLottoTest {
 
@@ -12,5 +13,6 @@ class WinningLottoTest {
         assertThatIllegalStateException()
             .isThrownBy { WinningLotto(winningLottoNumbers, bonusLotto) }
             .withMessage("당첨로또번호 6개 중 보너스번호가 동일합니다.")
+        assertDoesNotThrow { WinningLotto(winningLottoNumbers, LottoNumber(7)) }
     }
 }
